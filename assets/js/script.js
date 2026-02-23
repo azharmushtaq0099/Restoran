@@ -333,7 +333,7 @@ if (reservationForm) {
       return;
     }
     
-    const whatsappNumber = '92XXXXXXXXXX'; // Replace with actual WhatsApp number
+    const whatsappNumber = '923074731020'; // Koyo Pan Asian WhatsApp
     const message = `Hi Koyo Pan Asian,%0A%0AI would like to reserve a table.%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0ADate: ${encodeURIComponent(date)}%0ATime: ${encodeURIComponent(time)}%0AGuests: ${encodeURIComponent(guests)}%0A%0APlease confirm availability.`;
     
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
@@ -375,7 +375,7 @@ function addFloatingWhatsAppButton() {
   };
   
   whatsappButton.onclick = function() {
-    window.open('https://wa.me/92XXXXXXXXXX', '_blank'); // Replace with actual WhatsApp number
+    window.open('https://wa.me/923074731020', '_blank');
   };
   
   document.body.appendChild(whatsappButton);
