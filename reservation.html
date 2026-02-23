@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Restoran - Reservation</title>
+    <title>Koyo Pan Asian | Reservation - Book Your Table</title>
+    <meta name="description" content="Reserve your table at Koyo Pan Asian restaurant in Lahore. Book online now for authentic Pan Asian dining experience.">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -36,8 +37,7 @@
       <div class="container header my-3 d-none d-lg-flex">
         <div class="logo">
           <a href="./index.html">
-            <i class="fa fa-utensils me-3 text-dark"></i>
-            <h1 class="mb-0 text-dark">Restoran</h1>
+            <h1 class="mb-0 text-dark">Koyo Pan Asian</h1>
           </a>
         </div>
         <div class="menus">
@@ -86,8 +86,7 @@
         <div class="mobile-nav-logo">
           <div class="logo">
             <a href="./index.html">
-              <i class="fa fa-utensils me-3 text-dark"></i>
-              <h1 class="mb-0 text-dark">Restoran</h1>
+              <h1 class="mb-0 text-dark">Koyo</h1>
             </a>
           </div>
         </div>
@@ -267,90 +266,73 @@
                         <div data-aos="fade-right" class="reservation-line d-flex justify-content-center align-items-center">
                             <span></span>
                         </div>
-                        <form action="" class="position-relative">
+                        <form id="reservationForm" class="position-relative">
                             <img data-aos="fade-down-left" class="d-none d-lg-block" src="./assets/images/reservation-showcase.png" alt="">
-                            <p class="text-center" data-aos="fade-up-right">We willing to help you make the reservation online to save your time and money or you can call us directly through the customer service hotline: 225-88888</p>
+                            <p class="text-center" data-aos="fade-up-right">Reserve your table via WhatsApp and we'll confirm availability instantly!</p>
                             <div class="row mt-5">
                                 <div data-aos="fade-right" class="col-md-6">
                                     <div class="input-group">
                                         <div class="icon-wrapper d-flex align-items-center position-relative">
                                           <i class="fa fa-user py-2 px-3"></i>
                                         </div>
-                                        <input class="form-control bg-transparent border-0 px-3" type="text" placeholder="Username">
+                                        <input id="reserveName" class="form-control bg-transparent border-0 px-3" type="text" placeholder="Name" required>
                                     </div>
                                     <div class="input-group">
                                         <div class="icon-wrapper d-flex align-items-center position-relative">
                                           <i class="fa fa-phone py-2 px-3"></i>
                                         </div>
-                                        <input class="form-control bg-transparent border-0 px-3" type="text" placeholder="Phone">
+                                        <input id="reservePhone" class="form-control bg-transparent border-0 px-3" type="tel" placeholder="Phone" required>
                                     </div>
                                     <div class="input-group">
                                         <div class="icon-wrapper d-flex align-items-center position-relative">
                                           <i class="fa fa-calendar py-2 px-3"></i>
                                         </div>
-                                        <input class="form-control bg-transparent border-0 px-3" type="date" placeholder="Date">
+                                        <input id="reserveDate" class="form-control bg-transparent border-0 px-3" type="date" required>
                                     </div>
                                 </div>
                                 <div data-aos="fade-left" class="col-md-6">
                                     <div class="input-group">
                                         <div class="icon-wrapper d-flex align-items-center position-relative">
-                                          <i class="fa fa-envelope py-2 px-3"></i>
-                                        </div>
-                                        <input class="form-control bg-transparent border-0 px-3" type="email" placeholder="Email">
-                                    </div>
-                                    <div class="input-group">
-                                        <div class="icon-wrapper d-flex align-items-center position-relative">
                                             <i class="fa fa-person py-2 px-3"></i>
                                         </div>
-                                        <select class="form-select bg-transparent border-0 ps-3" name="" id="">
-                                            <option value="">1 Person</option>
-                                            <option value="">2 Person</option>
-                                            <option value="">3 Person</option>
-                                            <option value="">4 Person</option>
-                                            <option value="">5 Person</option>
-                                            <option value="">6 Person</option>
-                                            <option value="">7 Person</option>
-                                            <option value="">8 Person</option>
-                                            <option value="">9 Person</option>
-                                            <option value="">10 Person</option>
+                                        <select id="reserveGuests" class="form-select bg-transparent border-0 ps-3" required>
+                                            <option value="">Select Guests</option>
+                                            <option value="1">1 Guest</option>
+                                            <option value="2">2 Guests</option>
+                                            <option value="3">3 Guests</option>
+                                            <option value="4">4 Guests</option>
+                                            <option value="5">5 Guests</option>
+                                            <option value="6">6 Guests</option>
+                                            <option value="7">7 Guests</option>
+                                            <option value="8">8 Guests</option>
+                                            <option value="9">9 Guests</option>
+                                            <option value="10">10+ Guests</option>
                                         </select>
                                     </div>
                                     <div class="input-group">
                                         <div class="icon-wrapper d-flex align-items-center position-relative">
                                             <i class="fa fa-clock py-2 px-3"></i>
                                         </div>
-                                        <select type="text" placeholder="Time" class="ps-3 form-select bg-transparent border-0">
-                                            <option>7:00 AM</option>
-                                            <option>8:00 AM</option>
-                                            <option>9:00 AM</option>
-                                            <option>10:00 AM</option>
-                                            <option>11:00 AM</option>
-                                            <option>12:00 AM</option>
-                                            <option>1:00 PM</option>
-                                            <option>2:00 PM</option>
-                                            <option>3:00 PM</option>
-                                            <option>4:00 PM</option>
-                                            <option>5:00 PM</option>
-                                            <option>6:00 PM</option>
-                                            <option>7:00 PM</option>
-                                            <option>8:00 PM</option>
-                                            <option>9:00 PM</option>
-                                            <option>10:00 PM</option>
+                                        <select id="reserveTime" class="ps-3 form-select bg-transparent border-0" required>
+                                            <option value="">Select Time</option>
+                                            <option value="11:00 AM">11:00 AM</option>
+                                            <option value="12:00 PM">12:00 PM</option>
+                                            <option value="1:00 PM">1:00 PM</option>
+                                            <option value="2:00 PM">2:00 PM</option>
+                                            <option value="5:00 PM">5:00 PM</option>
+                                            <option value="6:00 PM">6:00 PM</option>
+                                            <option value="7:00 PM">7:00 PM</option>
+                                            <option value="8:00 PM">8:00 PM</option>
+                                            <option value="9:00 PM">9:00 PM</option>
+                                            <option value="10:00 PM">10:00 PM</option>
                                         </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="input-group" data-aos="fade-up-right">
-                                        <textarea class="form-control bg-transparent border-0 px-3" name="" id="" placeholder="Description"></textarea>
                                     </div>
                                 </div>
                             </div>
                             <div class="text-center" data-aos="fade-up-left">
                                 <div class="book-a-table contact-button">
                                     <div class="anim-layer"></div>
-                                    <a href="#">Book Table</a>
+                                    <button type="submit" style="cursor: pointer; background: none; border: none; padding: 0;">Book Table via WhatsApp</button>
                                 </div>
                             </div>
                         </form>

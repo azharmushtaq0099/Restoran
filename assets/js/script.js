@@ -316,6 +316,78 @@ $('.chef-choise-icons .fa-chevron-down').on('click', function() {
 // Update copyright year
 document.getElementById('copyrightCurrentYear').textContent = new Date().getFullYear();
 
+// WhatsApp Reservation Form Handler
+const reservationForm = document.getElementById('reservationForm');
+if (reservationForm) {
+  reservationForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('reserveName')?.value || '';
+    const phone = document.getElementById('reservePhone')?.value || '';
+    const date = document.getElementById('reserveDate')?.value || '';
+    const time = document.getElementById('reserveTime')?.value || '';
+    const guests = document.getElementById('reserveGuests')?.value || '';
+    
+    if (!name || !phone || !date || !time || !guests) {
+      alert('Please fill in all fields');
+      return;
+    }
+    
+    const whatsappNumber = '92XXXXXXXXXX'; // Replace with actual WhatsApp number
+    const message = `Hi Koyo Pan Asian,%0A%0AI would like to reserve a table.%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0ADate: ${encodeURIComponent(date)}%0ATime: ${encodeURIComponent(time)}%0AGuests: ${encodeURIComponent(guests)}%0A%0APlease confirm availability.`;
+    
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+    window.open(whatsappUrl, '_blank');
+  });
+}
+
+// Add Floating WhatsApp Button
+function addFloatingWhatsAppButton() {
+  const whatsappButton = document.createElement('div');
+  whatsappButton.id = 'floating-whatsapp';
+  whatsappButton.style.cssText = `
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+  `;
+  
+  whatsappButton.innerHTML = '<i class="fab fa-whatsapp" style="color: white; font-size: 32px;"></i>';
+  
+  whatsappButton.onmouseover = function() {
+    this.style.transform = 'scale(1.1)';
+    this.style.boxShadow = '0 6px 16px rgba(0,0,0,0.2)';
+  };
+  
+  whatsappButton.onmouseout = function() {
+    this.style.transform = 'scale(1)';
+    this.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+  };
+  
+  whatsappButton.onclick = function() {
+    window.open('https://wa.me/92XXXXXXXXXX', '_blank'); // Replace with actual WhatsApp number
+  };
+  
+  document.body.appendChild(whatsappButton);
+}
+
+// Add floating button when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', addFloatingWhatsAppButton);
+} else {
+  addFloatingWhatsAppButton();
+}
+
 
 var shoppingbtn = document.getElementById('shoppingbutton');
 var shoppingbtnMobile = document.getElementById('shoppingbuttonMobile');
