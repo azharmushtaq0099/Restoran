@@ -384,6 +384,41 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+/* Koyo Logo Styles */
+.loader-logo {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 30px;
+  animation: logoFloat 3s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.header-logo {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+}
+
+.header-logo-mobile {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footer-logo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
 
 /* Header Start */
 
@@ -842,6 +877,34 @@ header.scrolled {
   text-decoration: none;
   position: relative;
   z-index: 1;
+}
+
+.book-a-table button {
+  display: block;
+  font-size: 1rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 14px 24px;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+}
+
+.book-a-table:hover button {
+  color: #141214;
+}
+
+@media (max-width: 768px) {
+  .book-a-table {
+    width: 100%;
+    margin: 8px 0px;
+  }
+  
+  .d-flex.gap-3 {
+    flex-direction: column;
+  }
 }
 
 /* book-a-table button end */
