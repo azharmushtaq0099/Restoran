@@ -4,7 +4,8 @@
   "description": "Zaidi Tikka House - Authentic BBQ & Tikka Restaurant Website",
   "main": "index.html",
   "scripts": {
-    "start": "http-server -c-1 -o -p 8080"
+    "dev": "http-server -c-1 -p 3000",
+    "start": "http-server -c-1 -p 8080"
   },
   "keywords": [
     "BBQ",
