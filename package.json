@@ -1,0 +1,20 @@
+{
+  "name": "zaidi-tikka-house",
+  "version": "1.0.0",
+  "description": "Zaidi Tikka House - Authentic BBQ & Tikka Restaurant Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -c-1 -o -p 8080"
+  },
+  "keywords": [
+    "BBQ",
+    "Tikka",
+    "Restaurant",
+    "Rawalpindi"
+  ],
+  "author": "Zaidi Tikka House",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
