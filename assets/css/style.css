@@ -217,13 +217,11 @@
 
 /* Color Variables */
 :root {
-  --primary-color: #e5612f; /* Example Primary Color */
-  --secondary-color: #6c757d; /* Example Secondary Color */
-  --background-color: #eef0f1; /* Example Background Color */
-  --text-color: #212529; /* Example Text Color */
-  --heading-color: #343a40; /* Example Heading Color */
-  --border-color: #dee2e6; /* Example Border Color */
-  --text-color-white: #ffff;
+  --bg-color: #0a0a0a;
+  --text-color-white: #ffffff;
+  --text-color-orange: #ff4500;
+  --text-color-grey: #8d8d8d;
+  --text-color-dark: #0a0a0a;
 }
 
 /* Applying Fonts and Colors to Elements */
@@ -382,6 +380,43 @@ body::-webkit-scrollbar-thumb {
   to{
     transform: rotate(360deg);
   }
+}
+
+/* Koyo Logo Styles */
+.loader-text {
+  font-size: 48px;
+  font-weight: bold;
+  color: #ff4500;
+  margin-bottom: 30px;
+  animation: logoFloat 3s ease-in-out infinite;
+  letter-spacing: 2px;
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.header-logo {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+}
+
+.header-logo-mobile {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footer-logo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
 }
 
 
@@ -844,7 +879,76 @@ header.scrolled {
   z-index: 1;
 }
 
+.book-a-table button {
+  display: block;
+  font-size: 1rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 14px 24px;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+}
+
+.book-a-table:hover button {
+  color: #141214;
+}
+
+@media (max-width: 768px) {
+  .book-a-table {
+    width: 100%;
+    margin: 8px 0px;
+  }
+  
+  .d-flex.gap-3 {
+    flex-direction: column;
+  }
+}
+
 /* book-a-table button end */
+
+/* Zaidi Tikka House Custom Styles */
+.offers-section, .reviews-section, .contact-section {
+  scroll-margin-top: 100px;
+}
+
+.offer-card, .review-card, .contact-info {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-card:hover, .review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 69, 0, 0.2);
+}
+
+.offer-card h4, .review-card h5 {
+  margin-bottom: 15px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* ZTH Logo styles */
+.logo h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ff4500;
+}
+
+.logo p {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
 
 /* services cards start */
 
